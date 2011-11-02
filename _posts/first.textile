@@ -1,0 +1,8 @@
+---
+layout: post
+title: Hi There
+---
+
+h1. {{ page.title }}
+
+p. I'm in a p tag
