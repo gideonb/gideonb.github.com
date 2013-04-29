@@ -1,14 +1,5 @@
-/*!
- *   _____ _____ _____  ______ ____  _   _ 
- *  / ____|_   _|  __ \|  ____/ __ \| \ | |
- * | |  __  | | | |  | | |__ | |  | |  \| |
- * | | |_ | | | | |  | |  __|| |  | | . ` |
- * | |__| |_| |_| |__| | |____ |__| | |\  |
- *  \_____|_____|_____/|______\____/|_| \_| 
- *                                                                                           
- */
 /* Reset.less
- * Props to Eric Meyer (meyerweb.com) for his CSS reset file. We're using an adapted version here	that cuts out some of the reset HTML elements we will never need here (i.e., dfn, samp, etc).
+ * Props to Eric Meyer (meyerweb.com) for his CSS reset file. 
  * ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 html, body {
   margin: 0;
@@ -413,26 +404,13 @@ header#top {
 
 
  body {
-	 background: #222 url('/images/wood.png');
  }
 
- .g {
-	 position: absolute;
-	 top: 50%;
-	 left: 50%;
-	 width: 150px;
-	 height: 150px;
-	 margin-top: -120px;
-	 margin-left: -83px;
- }
-
- .icons {
-	 position: absolute;
-	 bottom: 50px;
-	 left: 50%;
-	 width: 210px;
-	 margin-left: -105px;
- }
-
-
+.photo {
+	display: block;
+	height: 500px;
+	text-align: center;
+	background: url(/images/cave.jpg);
+	background-size: cover;
+}
 
