@@ -1,15 +1,35 @@
 ---
 layout: default
 ---
-<div id="post">
-{{ content }}
+
+{% include header.html %}
+
+<div class="content__container">
+  <div class="post__container">
+    <h2 class="post__title">{{ page.title }}</h2>
+    <h6 class="post__date">{{ page.date | date_to_string }}</h6>
+    <p class="post__excerpt">{{ content }}</p>
+  </div>
 </div>
 
-<div id="related">
-  <h2>More Posts</h2>
-  <ul class="posts">
-    {% for post in site.related_posts limit:3 %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
+<div class="post__related">
+  <h2 class="post__related__header">More Posts</h2>
+  {% for post in site.related_posts limit:3 %}
+    <a class="home__post__link" href="{{ post.url }}">
+      <div class="home__post__hover">
+        <div class="post__container">
+          <h2 class="post__title">{{ post.title }}</h2>
+          <h6 class="post__date">{{ post.date | date_to_string }}</h6>
+          <p class="post__excerpt">{{ post.excerpt | strip_html}}</p>
+        </div>
+      </div>
+    </a>
+  {% endfor %}
 </div>
+
+
+
+{% include footer.html %}
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="/js/home.js"></script>

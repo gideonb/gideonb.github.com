@@ -170,10 +170,10 @@ textarea {
  * Headings, body text, lists, code, and more for a versatile and durable typography system
  * ---------------------------------------------------------------------------------------- */
 p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: normal;
-  line-height: 18px;
-  margin-bottom: 9px;
+  line-height: 25.8px;
+  margin-bottom: 14px;
 }
 p small {
   font-size: 11px;
@@ -197,8 +197,8 @@ h6 small {
   color: #bfbfbf;
 }
 h1 {
-  margin-bottom: 18px;
   font-size: 30px;
+  margin-bottom: 15px;
   line-height: 36px;
 }
 h1 small {
@@ -206,34 +206,41 @@ h1 small {
 }
 h2 {
   font-size: 24px;
-  line-height: 36px;
+  margin-bottom: 12px;
+  line-height: 43.2px;
 }
 h2 small {
-  font-size: 14px;
+  font-size: 16px;
 }
+
 h3,
 h4,
 h5,
 h6 {
-  line-height: 36px;
+  margin-bottom: 10px;
 }
+
 h3 {
   font-size: 18px;
+  line-height: 32.4px;
 }
 h3 small {
   font-size: 14px;
 }
 h4 {
   font-size: 16px;
+  line-height: 28.8px;
 }
 h4 small {
   font-size: 12px;
 }
 h5 {
   font-size: 14px;
+  line-height: 25.8px;
 }
 h6 {
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 25.8px;
   color: #bfbfbf;
   text-transform: uppercase;
 }
@@ -364,33 +371,53 @@ body:before, body:after {
 body:after {
   clear: both;
 }
-header#top {
-  margin-bottom: 1em;
+
+/* Gideon Resets */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
-#maincolumn {
-  display: inline;
-  float: left;
-  width: 72.91666666666666%;
-  margin: 0 1.0416666666666665%;
+::selection {
+  background: #cedae5;
 }
-#sidebar {
-  display: inline;
-  float: left;
-  width: 22.916666666666664%;
-  margin: 0 1.0416666666666665%;
-}
-@media screen and (max-width: 720px) {
-  #maincolumn, #sidebar {
-    display: inline;
-    float: left;
-    width: 97.91666666666666%;
-    margin: 0 1.0416666666666665%;
-    margin-bottom: 1em;
-  }
+::-moz-selection {
+  background: #cedae5;
 }
 
+/* no input glow */
+textarea, input { 
+  outline: none; 
+}
+html{ height: 100%; }
+body {
+  height: 100%;
+  background-color: 
+  color: #19202c;
+  font-size: 100%;
+  text-size-adjust: 100%
+}
+img, object, embed {
+  max-width: 100%;
+}
+img {
+  height: auto;
+}
 
-
+/* Clearfix with a different name */
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.hide {
+  display: none !important;
+}
+a{
+  color: #355489;
+}
 
 /*!
  *   _____ _____ _____  ______ ____  _   _ 
@@ -402,15 +429,129 @@ header#top {
  *                                                                                           
  */
 
-
- body {
- }
-
-.photo {
-	display: block;
-	height: 500px;
+body{
+  font-family: "Proxima Nova","Open Sans","Gill Sans MT","Gill Sans",Corbel,Arial,sans-serif;
+  background: #19202B;
+}
+header {
+	min-height: 400px;
 	text-align: center;
 	background: url(/images/cave.jpg);
 	background-size: cover;
+  color: white;
+}
+.header__nav{
+  color: white;
+  position: absolute;
+  z-index: 1000;
+  font-size: 2.5em;
+  padding: 7px 20px 11px 20px;
+  background: #000;
+  opacity: 0.7;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+a:hover .header__nav{
+  opacity: 1;
+}
+header svg{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: crosshair;
+}
+header .header__tagline{
+  font-family: "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
+  background-color: white;
+  color: #333;
+  width: 270px;
+  margin: 0 auto;
+  font-weight: 500;
+  -webkit-font-smoothing: antialiased;
+}
+header .header__title{
+  padding-top: 140px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-weight: bolder;
+  margin-bottom: 50px;
+  -webkit-font-smoothing: antialiased;
 }
 
+rect {
+  fill: none;
+  pointer-events: all;
+}
+
+.node {
+  stroke: #fff;
+  stroke-width: 1px;
+}
+
+.link {
+  stroke: #fff;
+  stroke-opacity: .2;
+}
+
+.cursor {
+  fill: black;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+
+.content__container{
+  background-color: white;
+}
+.home__post__link{
+  width: 100%;
+  text-decoration: none;
+}
+.home__post__link:hover .home__post__hover{
+  background-color: #fdfbe4;
+  width:100%;
+}
+.post__container{
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+.post__title{
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.post__date{
+  font-weight: 100;
+}
+a .post__excerpt{
+  color: #19202c;
+}
+
+footer{
+  text-align: center;
+  height: 150px;
+  background: #19202B
+}
+
+.footer__about{
+  color: white;
+  padding-top: 65px;
+  -webkit-font-smoothing: antialiased;
+}
+.footer__about a{
+color: white;
+}
+
+
+.post__related{
+  background-color: white;
+}
+.post__related__header{
+  width: 600px;
+  margin: 0 auto;
+  padding: 40px 0 20px 0;
+}
