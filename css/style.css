@@ -433,13 +433,20 @@ body{
   font-family: "Proxima Nova","Open Sans","Gill Sans MT","Gill Sans",Corbel,Arial,sans-serif;
   background: #19202B;
 }
-header {
+.header {
 	min-height: 400px;
 	text-align: center;
 	background: url(/images/cave.jpg);
 	background-size: cover;
   color: white;
 }
+.header::selection {
+  background: transparent;
+}
+.header::-moz-selection {
+  background: transparent;
+}
+
 .header__nav{
   color: white;
   position: absolute;
@@ -455,14 +462,14 @@ header {
 a:hover .header__nav{
   opacity: 1;
 }
-header svg{
+.header svg{
   position: absolute;
   top: 0px;
   left: 0px;
   cursor: crosshair;
 }
-header .header__tagline{
-  font-family: "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
+.header__tagline{
+  font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
   background-color: white;
   color: #333;
   width: 270px;
@@ -470,7 +477,7 @@ header .header__tagline{
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
-header .header__title{
+.header__title{
   padding-top: 140px;
   color: white;
   text-transform: uppercase;
@@ -533,13 +540,16 @@ a .post__excerpt{
 
 footer{
   text-align: center;
-  height: 150px;
-  background: #19202B
+  min-height : 300px;
+  background: #19202B;
+  padding: 100px 0;
 }
-
+.footer__g{
+  opacity: 0.2;
+}
 .footer__about{
   color: white;
-  padding-top: 65px;
+  padding-top: 45px;
   -webkit-font-smoothing: antialiased;
 }
 .footer__about a{
@@ -554,4 +564,29 @@ color: white;
   width: 600px;
   margin: 0 auto;
   padding: 40px 0 20px 0;
+}
+
+@font-face {
+  font-family: 'EB Garamond';
+  font-style: normal;
+  font-weight: 400;
+  src: local('EB Garamond'), local('EBGaramond'), url(http://themes.googleusercontent.com/static/fonts/ebgaramond/v4/kYZt1bJ8UsGAPRGnkXPeFbrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }

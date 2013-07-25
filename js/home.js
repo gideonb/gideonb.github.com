@@ -8,10 +8,10 @@ var force = d3.layout.force()
     .nodes([{}]) // initialize with a single node
     .linkDistance(100) // target distance
     .linkStrength(0.02)  // 0-1 (1 being strongest)
-  .friction(0.0) // 0-1 (1 is frictionless,0 freezes all particles in place)
-  .charge(-30) // how much particles repel each other
-  .theta(0.8) // determines accuracy of calculations, higher values may slow down processor
-  .gravity(0.0) // draws nodes to center, defaults to 0.1
+    .friction(0.0) // 0-1 (1 is frictionless,0 freezes all particles in place)
+    .charge(-30) // how much particles repel each other
+    .theta(0.8) // determines accuracy of calculations, higher values may slow down processor
+    .gravity(0.0) // draws nodes to center, defaults to 0.1
     .on("tick", tick);
 
 var svg = d3.select("header").append("svg")
@@ -34,7 +34,9 @@ var cursor = svg.append("circle")
     .attr("transform", "translate(-100,-100)")
     .attr("class", "cursor");
 
+
 restart();
+// populate();
 
 function mousemove() {
   cursor.attr("transform", "translate(" + d3.mouse(this) + ")");
@@ -82,4 +84,20 @@ function restart() {
       .call(force.drag);
 
   force.start();
+}
+
+function populate () {
+  for (var i=0;i<50;i++){ 
+    var node = {x: Math.floor((Math.random()*300)+100), y: Math.floor((Math.random()*200)+100) };
+    var n = nodes.push(node);
+  }
+  // add links to any nearby nodes
+  nodes.forEach(function(target) {
+    var x = target.x - node.x,
+        y = target.y - node.y;
+    if (Math.sqrt(x * x + y * y) < 100) {
+      links.push({source: node, target: target});
+    }
+  });
+  restart();
 }
