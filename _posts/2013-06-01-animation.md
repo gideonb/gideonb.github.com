@@ -1,15 +1,12 @@
 ---
 layout: post
-title: Using depth, space, and animation to build better interfaces
+title: Using animation to build better interfaces
 ---
 
 
 
-iOS 7 launches in a few weeks.  When it does, animations will be more commonly seen as a useful interface tool.  If you're not sure what I'm talking about, watch some of [these videos](http://www.apple.com/ios/ios7/) first. 
 
-It is safe to assume that we will see animations being used more often as a navigational tool in the coming year.  Here are some tips for working animation into your designs.
-
-**Plan the physical layout or the your animations won't make any sense**
+**Plan the physical layout or the animations won't make sense**
 
 If you use animation to navigate between screens, you need to layout your whole app in physical space or the animations won't make any sense.  Stop thinking of "information architecture" in abstract terms.  Try to think of your app as a physical structure instead of a series of screens.  If you find a structure that makes intuitive sense to you, use that as a starting point, then mock it up. 
 
@@ -21,7 +18,7 @@ This one is fairly simple --  if you're not sure about an animation, try to anim
 
 **Provide contextual cues to avoid building a maze**
 
-About a decade ago, a researcher at Yale learned that we are able to use low-level visual cues like colour and shape to quickly orient visual perception.  Marvin Chun would show his test subjects an image exactly like the one below, and they would have to press a key when they found the "T" hidden amongst the "L"s. If they decided there was no "T" they would press another key.  After they had made their decision, they were asked whether they had seen that particular display before.  
+About a decade ago, a researcher at Yale learned that we are able to use low-level visual cues like color and shape to quickly orient visual perception.  Marvin Chun would show his test subjects an image exactly like the one below, and they would have to press a key when they found the "T" hidden amongst the "L"s. If they decided there was no "T" they would press another key.  After they had made their decision, they were asked whether they had seen that particular display before.  
 
 The remarkable part of this study was not that people were faster at finding the T if they had seen that particular slide before, but that they were unable to differentiate the slides they had seen from they ones they hadn't.  I'll say that again, because it's very strange: people are faster at finding the "T" in the slides they have seen before, even though they cannot guess better than chance whether they've seen it before or not.
 

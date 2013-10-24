@@ -1,5 +1,5 @@
 var width = 1600,
-    height = 400;
+    height = 700;
 
 var fill = d3.scale.category20();
 

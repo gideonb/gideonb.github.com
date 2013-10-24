@@ -434,7 +434,7 @@ body{
   background: #19202B;
 }
 .header {
-	min-height: 400px;
+	min-height: 700px;
 	text-align: center;
 	background: url(/images/cave.jpg);
 	background-size: cover;
@@ -472,13 +472,13 @@ a:hover .header__nav{
   font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
   background-color: white;
   color: #333;
-  width: 270px;
-  margin: 0 auto;
+  display: inline-block;
+  padding: 0.25em 0.5em;
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
 }
 .header__title{
-  padding-top: 140px;
+  padding-top: 200px;
   color: white;
   text-transform: uppercase;
   letter-spacing: 6px;
