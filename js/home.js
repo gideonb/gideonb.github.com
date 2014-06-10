@@ -1,5 +1,14 @@
-var width = 1600,
-    height = 700;
+$(document).ready(function() {
+  var winWidth = $(window).width(); 
+  $( 'svg' ).css('width', winWidth);
+
+  $( window ).resize(function() {
+    resize();
+  });
+});
+
+var width = $( window ).width();
+    height = 450;
 
 var fill = d3.scale.category20();
 
@@ -14,7 +23,7 @@ var force = d3.layout.force()
     .gravity(0.0) // draws nodes to center, defaults to 0.1
     .on("tick", tick);
 
-var svg = d3.select("header").append("svg")
+var svg = d3.select(".header").append("svg")
     .attr("width", width)
     .attr("height", height)
     .on("mousemove", mousemove)
@@ -34,9 +43,12 @@ var cursor = svg.append("circle")
     .attr("transform", "translate(-100,-100)")
     .attr("class", "cursor");
 
+    restart();
 
-restart();
-// populate();
+function resize() {
+  var winWidth = $(window).width(); 
+  $( 'svg' ).css('width', winWidth);
+}
 
 function mousemove() {
   cursor.attr("transform", "translate(" + d3.mouse(this) + ")");
