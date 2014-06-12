@@ -498,32 +498,33 @@ body{
 /*	background-size: cover;*/
 }
 .header::selection {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 .header::-moz-selection {
-  background: transparent;
+  background: rgba(255, 255, 255, 0);
 }
 
 .header__nav{
-  color: white;
+  color: #66b5d7;
   position: absolute;
   z-index: 1000;
   font-size: 2.5em;
   padding: 7px 20px 11px 20px;
-  background: #000;
-  opacity: 0.15;
+  background: #fff;
+  opacity: 0.85;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 a:hover .header__nav{
-  opacity: 0.3;
+  opacity: 1;
 }
 .header svg{
   position: absolute;
   top: 0px;
   left: 0px;
   cursor: crosshair;
+  z-index: 500;
 }
 .header__tagline{
   font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
@@ -532,6 +533,7 @@ a:hover .header__nav{
   display: inline-block;
   padding: 0.25em 0.5em;
   font-weight: 500;
+  z-index: 5000;
   -webkit-font-smoothing: antialiased;
 }
 .header__title{
@@ -541,31 +543,28 @@ a:hover .header__nav{
   letter-spacing: 6px;
   font-weight: bolder;
   margin-bottom: 50px;
+  z-index: 5001;
   -webkit-font-smoothing: antialiased;
 }
-
 rect {
   fill: none;
   pointer-events: all;
 }
-
 .node {
   stroke: #fff;
   stroke-width: 1px;
 }
-
 .link {
   stroke: #fff;
   stroke-opacity: .2;
 }
-
 .cursor {
-  fill: black;
-  opacity: 0.15;
+  fill: transparent;
+  stroke: #fff;
+  opacity: 0.85;
   pointer-events: none;
+  position: relative;
 }
-
-
 .content__container{
   background-color: white;
 }
@@ -650,13 +649,6 @@ color: white;
 
 
 
-
-
-
-
-
-
-
 .home_content_container{
   padding: 0 5% 150px 5%;
   background-color: white;
@@ -665,10 +657,10 @@ color: white;
   padding: 90px 0 0 0;
 }
 .home_project_image--bench{
-  background-color: #f1dcb2;
+  background-color: #ffd378;
 }
 .home_project_image--bench:hover{
-  background-color: #f1dcb2;
+  background-color: #ffd378;
 }
 
 .home_project_image--mint{
@@ -679,14 +671,11 @@ color: white;
 }
 
 .home_project_image--versapay{
-  background-color: #f9cf4c;
+  background-color: #e0734d;
 }
 .home_project_image--versapay:hover{
-  background-color: #f9cf4c;
+  background-color: #e0734d;
 }
-
-
-
 
 .project_text{
   margin-top: 60px;
@@ -698,12 +687,30 @@ color: white;
   color: #333;
 }
 
-
 .home_project_title_serif{
   font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
   font-weight: 500;
   color: #999;
   -webkit-font-smoothing: antialiased;
 }
+
+.home_project_link{
+  color: #66b5d7;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 3px;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.home_project_link:hover{
+  padding-bottom: 1px;
+  border-bottom: 1px solid transparent;
+}
+
+
+
+
+
 
 
