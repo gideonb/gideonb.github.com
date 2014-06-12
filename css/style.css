@@ -710,7 +710,10 @@ color: white;
 
 
 
-
+.dribbble .row [class*='col-']:last-of-type {
+  padding-right:20px;
+  padding-bottom: 18px;
+}
 
 
 
