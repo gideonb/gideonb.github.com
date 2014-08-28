@@ -51,23 +51,12 @@ window.Attribution.load = function(callback){
   script.id = 'attribution-js';
   script.async = true;
   script.src = '//staging.attribution-client.divshot.io/attribution-staging.js';
-  script.addEventListener('load', function (e) {
-    if(typeof callback === 'function') {
-      callback(e);
-    }
-  }, false);
 
   var first = document.getElementsByTagName('script')[0];
   first.parentNode.insertBefore(script, first);
 };
 
-window.Attribution.load(function () {
-  while (window.Attribution.length > 0) {
-    var item = window.Attribution.shift();
-    var method = item.shift();
-    if (window.Attribution[method]) window.Attribution[method].apply(window.Attribution, item);
-  }
-});
+window.Attribution.load();
 
 window.Attribution.projectId = 'Dm6bzczfw3lsANRft0bwxg';
 
