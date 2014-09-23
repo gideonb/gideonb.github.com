@@ -677,6 +677,13 @@ color: white;
   background-color: #e0734d;
 }
 
+.home_project_image--attribution{
+  background-color: #9cdab9;
+}
+.home_project_image--attribution:hover{
+  background-color: #9cdab9;
+}
+
 .project_text{
   margin-top: 60px;
 }
