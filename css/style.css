@@ -505,7 +505,7 @@ body{
 }
 
 .header__nav{
-  color: #66b5d7;
+  color: #65A8C5;
   position: absolute;
   z-index: 1000;
   font-size: 2.5em;
@@ -657,17 +657,17 @@ color: white;
   padding: 90px 0 0 0;
 }
 .home_project_image--bench{
-  background-color: #ffd378;
+  background-color: #E2BD70;
 }
 .home_project_image--bench:hover{
-  background-color: #ffd378;
+  background-color: #E2BD70;
 }
 
 .home_project_image--mint{
-  background-color: #5bc28b;
+  background-color: #96c97c;
 }
 .home_project_image--mint:hover{
-  background-color: #5bc28b;
+  background-color: #96c97c;
 }
 
 .home_project_image--versapay{
@@ -678,10 +678,10 @@ color: white;
 }
 
 .home_project_image--attribution{
-  background-color: #328557;
+  background-color: #E7E3D4;
 }
 .home_project_image--attribution:hover{
-  background-color: #328557;
+  background-color: #E7E3D4;
 }
 
 .project_text{
