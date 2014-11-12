@@ -656,32 +656,8 @@ color: white;
 .project_container{
   padding: 90px 0 0 0;
 }
-.home_project_image--bench{
-  background-color: #E2BD70;
-}
-.home_project_image--bench:hover{
-  background-color: #E2BD70;
-}
-
-.home_project_image--mint{
-  background-color: #96c97c;
-}
-.home_project_image--mint:hover{
-  background-color: #96c97c;
-}
-
-.home_project_image--versapay{
-  background-color: #e0734d;
-}
-.home_project_image--versapay:hover{
-  background-color: #e0734d;
-}
-
-.home_project_image--attribution{
-  background-color: #E7E3D4;
-}
-.home_project_image--attribution:hover{
-  background-color: #E7E3D4;
+.home_project_image--bench, .home_project_image--mint, .home_project_image--attribution, .home_project_image--versapay{
+  background-color: #36333f;
 }
 
 .project_text{
