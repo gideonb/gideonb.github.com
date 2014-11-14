@@ -22,45 +22,7 @@
   
   {{ content }}
   
-</div>
 
-<script type="text/javascript">
-window.Attribution = window.Attribution || [];
-
-window.Attribution.methods = ['identify', 'track', 'page'];
-
-window.Attribution.factory = function(method){
-  return function(){
-    var args = Array.prototype.slice.call(arguments);
-    args.unshift(method);
-    window.Attribution.push(args);
-    return window.Attribution;
-  };
-};
-
-for (var i = 0; i < window.Attribution.methods.length; i++) {
-  var key = window.Attribution.methods[i];
-  window.Attribution[key] = window.Attribution.factory(key);
-}
-
-window.Attribution.load = function(callback){
-  if (document.getElementById('attribution-js')) return;
-
-  var script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.id = 'attribution-js';
-  script.async = true;
-  script.src = '//staging.attribution-client.divshot.io/attribution-staging.js';
-
-  var first = document.getElementsByTagName('script')[0];
-  first.parentNode.insertBefore(script, first);
-};
-
-window.Attribution.load();
-
-window.Attribution.projectId = 'Dm6bzczfw3lsANRft0bwxg';
-
-window.Attribution.page();</script> 
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
