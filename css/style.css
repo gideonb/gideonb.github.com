@@ -698,5 +698,7 @@ color: white;
   padding-bottom: 18px;
 }
 
-
+.shot{
+  max-width: 400px;
+}
 
