@@ -490,7 +490,7 @@ body{
   background: #19202B;
 }
 .header {
-	min-height: 450px;
+	height: 500px;
 	text-align: center;
   color: white;
   background-color: #66b5d7;
@@ -565,6 +565,34 @@ rect {
   pointer-events: none;
   position: relative;
 }
+
+
+
+.home_content_container{
+  text-align: center;
+  background-color: white;
+}
+
+.home_content_container img{
+  max-width: 250px;
+}
+
+a.column--attribution:hover{
+  background-color: #eee;
+}
+
+a.column--shopify:hover{
+  background-color: #eee;
+}
+
+.column--attribution, .column--shopify{
+  padding: 300px 0;
+  border-left: 3px solid #ccc;
+  height: 100%;
+}
+
+
+
 .content__container{
   background-color: white;
 }
@@ -596,20 +624,35 @@ a .post__excerpt{
 
 footer{
   text-align: center;
-  min-height : 300px;
   background: #36333f;
-  padding: 100px 0;
+  padding: 200px 0;
+  background-image: url('/images/el_tubo.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: 25% 25%;
+  -moz-box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0 15px rgba(0,0,0,0.5);
 }
 .footer__g{
   opacity: 0.9;
 }
 .footer__about{
-  color: white;
-  padding-top: 45px;
-  -webkit-font-smoothing: antialiased;
+  padding-top: 35px;
 }
+.footer__about__line{
+  -webkit-font-smoothing: antialiased;
+  font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
+  font-size: 16px;
+  background-color: #fff;
+  color: #36333f;
+  display: inline-block;
+  padding: 0.4em 0.5em;
+  font-weight: 500;
+}
+
 .footer__about a{
-color: white;
+  color: #36333f;
 }
 
 
@@ -645,60 +688,5 @@ color: white;
   font-style: normal;
   font-weight: 700;
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
-}
-
-
-
-.home_content_container{
-  padding: 0 5% 150px 5%;
-  background-color: white;
-}
-.project_container{
-  padding: 90px 0 0 0;
-}
-.home_project_image--bench, .home_project_image--mint, .home_project_image--attribution, .home_project_image--versapay{
-  background-color: #36333f;
-}
-
-.project_text{
-  margin-top: 60px;
-}
-.home_project_link{
-  text-decoration: none;
-}
-.home_project_link:hover h6{
-  color: #333;
-}
-
-.home_project_title_serif{
-  font-family: 'EB Garamond', "Adobe Garamond Pro", Constantia,"Times New Roman",Times,serif;
-  font-weight: 500;
-  color: #999;
-  -webkit-font-smoothing: antialiased;
-}
-
-.home_project_link{
-  color: #66b5d7;
-  text-decoration: none;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 3px;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.home_project_link:hover{
-  padding-bottom: 1px;
-  border-bottom: 1px solid transparent;
-}
-
-
-
-.dribbble .row [class*='col-']:last-of-type {
-  padding-right:20px;
-  padding-bottom: 18px;
-}
-
-.shot{
-  max-width: 400px;
 }
 
