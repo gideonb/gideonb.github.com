@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width">
+
+  <title>Pipeline Theme Documentation</title>
+
+  <!-- Flatdoc -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src='/shopify/docs/vendor/legacy.js'></script>
+  <script src='/shopify/docs/vendor/flatdoc.js'></script>
+
+  <!-- Flatdoc theme -->
+  <link  href='/shopify/docs/vendor/theme-white/style.css' rel='stylesheet'>
+  <script src='/shopify/docs/vendor/theme-white/script.js'></script>
+  <link  href='/shopify/docs/pipeline.css' rel='stylesheet'>
+
+  <!-- Meta -->
+  <meta content="Your Project" property="og:title">
+  <meta content="Your Project description goes here." name="description">
+
+  <!-- Initializer -->
+  <script>
+    Flatdoc.run({
+      fetcher: Flatdoc.file('/shopify/docs/docs-pipeline.md')
+    });
+  </script>
+</head>
+<body role='flatdoc' class='large-brief pipeline no-literate'>
+
+  <div class='header'>
+    <div class='left'>
+      <h1>Pipeline Theme</h1>
+      <ul>
+        <li><a href='https://pipeline-theme.myshopify.com/'>Live Demo</a></li>
+        <li><a href='mailto:gideon@corknine.com'>Contact</a></li>
+      </ul>
+    </div>
+    <div class='right'>
+    </div>
+  </div>
+
+  <div class='content-root'>
+    <div class='menubar'>
+      <div class='menu section' role='flatdoc-menu'></div>
+    </div>
+    <div role='flatdoc-content' class='content'></div>
+  </div>
+
+</body>
+</html>
