@@ -8,7 +8,7 @@ $(document).ready(function() {
 });
 
 var width = $( window ).width();
-    height = 500;
+    height = 900;
 
 var fill = d3.scale.category20();
 
